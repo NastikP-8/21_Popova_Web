@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>initial</title>
+
+        <style>
+            table {
+                border: 1px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            td, th {
+                width: 150px;
+                height: 50px;
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            table tr:nth-child(even) { 
+                background: #ee4d4d;
+                width: 100%;
+            }
+
+            table tr:nth-child(odd) {
+                background: rgb(221, 221, 251);
+            }
+
+            main {
+                background: rgb(147, 147, 248);
+                padding: 80px;
+            }
+
+            nav {
+                background: rgb(194, 194, 249);
+                position: fixed;
+            }
+
+            h2, h3, h4 {
+                text-align: center;
+            }
+
+            p, q {
+                font-size: large;
+            }
+
+            li {
+                margin-bottom: 8px;
+            }
+
+            .anecdots img {
+                width: 550px;
+                height: 350px;
+                border-radius: 10px;
+            }
+
+            .content img {
+                width: 570px;
+                height: 350px;
+                position: absolute;
+                right: 50px;
+                top: 260px;
+                border-radius: 10px;
+            }
+
+            hr {
+                border-color:rgb(147, 147, 248);
+                background-color: rgb(147, 147, 248);
+            }
+
+            .anecdots {
+                margin: 50px 250px; 
+                padding: 50px;
+                text-align: center;
+                border: 3px dashed rgb(253, 142, 15);
+                background: rgb(179, 179, 253);
+            }
+
+            .content {
+                margin: 60px 130px; 
+                padding: 50px;
+                border: 3px dashed rgb(253, 142, 15);
+                background: rgb(179, 179, 253);
+                position: relative;
+            }
+
+            .football {
+                margin: 60px 250px; 
+                padding: 50px;
+                border: 3px dashed rgb(253, 142, 15);
+                text-align: center;
+                background: rgb(179, 179, 253);
+            }
+
+            .content1 {
+                margin: 60px 620px 30px 30px;
+                padding: 20px;
+                background: rgb(169, 169, 252);
+            }
+
+            .content2 {
+                margin: 60px 620px 30px 30px;
+                padding: 20px;
+                background: rgb(169, 169, 252);
+            }
+
+            .content3 {
+                margin: 60px 270px 20px 270px;
+                padding: 20px;
+                background: rgb(169, 169, 252);
+            }
+
+        </style>
+       
+    </head>
+
+    <body>
+        <nav>
+            <a href="#a">Анекдоты</a>
+            <a href="#c">Контент</a>
+            <a href="#f">Футбол</a>
+        </nav>
+        <main>
+            <h1>Что-то типа утренней сводки контента</h1>
+            <div class="anecdots">
+                <h2 id="a">Топ-3 анекдота</h2>
+                <h3>Ладно, не топ, а 3 рандомных анекдота</h3>
+                <hr size="6px">
+                    <div style="background-color: rgb(169, 169, 252);">
+                        <p>
+                            Рассказываешь маме, что освоил язык гипертекстовой разметки, <br>и скоро поедешь в Дубай писать скрипты для ракет Илона Маска
+                        </p>
+                    </div>
+                    <img
+                        src="https://cs17.pikabu.ru/s/2025/11/22/17/jfyvkmcg.jpg"
+                        alt="Иллюстрация, раскрывающая суть приведённого в текстовом виде анекдота и дополняющая его графической информацией ">
+                        <hr>
+                            
+                    <div style="background-color: rgb(169, 169, 252);">
+                        <p>
+                            Почему голубь не может зайти на сайт? <br>Неверный урл
+                        </p>
+                    </div>
+                    <img
+                        src="https://cdn.fishki.net/upload/users/2019/03/19/1516077/bdc8c40c189c8239865721c534431349.jpg"
+                        alt="Просто картинка голубя">
+                    <hr>
+                    
+                    <div style="background-color: rgb(169, 169, 252);">
+                        <p>
+                            Попроси программиста проверить 10 строк кода - он найдёт 10 проблем.<br>
+                            Попроси его проверить 500 строк, и он скажет, что выглядит норм.
+                        </p>
+                    </div>
+                    <img
+                        src="https://i.pinimg.com/originals/10/96/3b/10963b5b88ad9d86a8308c1d9fc3de35.jpg"
+                        alt="Иллюстрация, демонстрирующая вариант представления читающим шутку программиста, описанного в данной шутке">
+           
+                
+            </div>
+
+            <div class="content">
+                <h2 id="c">«Очень странные дела»</h2>
+                <hr size="6px">
+
+                <div class="content1">
+                    
+                    <h3>Описание</h3>
+                    <h4>(Ctrl V из Википедии)</h4>
+                    
+                    <p>«Очень странные дела» (англ. Stranger Things) — американский драматический сериал, 
+                        созданный братьями Даффер для стриминг-сервиса Netflix. Представляет собой смесь ужасов, драмы, 
+                        научной фантастики, мистерии и истории взросления. Действие сериала происходят в 1980-х годах в 
+                        вымышленном городке Хоукинс, штат Индиана; жители которого сталкиваются с влиянием чуждого и опасного 
+                        параллельного измерения — «Изнанки».
+                    </p>
+                </div>
+                
+                <img class="right_img"
+                    src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/b3bcbe03-883d-4a4d-9692-fc13146e9262/1920x"
+                    alt="Кадр из сериала ОСД">
+
+                <div class="content2">
+                    <h3>Цитаты из сериала</h3>
+                    <h4>(Там и другие есть, это просто 3 из них)</h4>
+                    <ul>
+                        <li>
+                            <q>
+                                -Ты должен попадать по банкам. <br> -Нет, совсем нет. Видишь пространство между банками? Я целюсь туда.
+                            </q>
+                        </li>
+                        <li>
+                            <q>
+                                Не принимай это на свой счёт, хорошо? Я не люблю большинство людей.
+                            </q>
+                        </li>
+                        <li>
+                            <q>
+                                -Ты бы мне хоть цветы купил!<br>
+                                -Зачем? Ты ведь ещё жива..
+                            </q>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <div class="content3">
+                    <h3>Мой отзыв</h3>
+                    <h4>(Ну вдруг кому интересно)</h4>
+                    <p>Мне зашло.
+                        
+                        Нестандартные повороты сюжета, атмосфера, страшные монсты  - все характеристики хорошего сериала присутствуют. 
+                        Единственное, на что могу пожаловаться (немного спойлер): <s>сценаристы слишком любят, чтообы "жили все долго и счастливо".</s>
+                        Но в целом всё сбалансированно и вкусно.
+                    </p>
+                </div>
+            </div>
+
+            <div class="football">
+                <h2 id="f">Недавние матчи команды Спартак-Москва</h2>
+                <hr size="6px">
+                <div style="background-color: rgb(169, 169, 252); margin: auto 200px auto 200px; padding-bottom: 10px;">
+                    <table>
+                        <caption>
+                            Информация и итоги игр
+                        </caption>
+                        <thead>
+                            <tr style="background-color: #ee4d4d;">
+                                <th>Дата</th>
+                                <th>Соперник</th>
+                                <th>Результат</th>
+                                <th>Время</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>03.02.2026</td>
+                                <td>Пюник</td>
+                                <td>2:0</td>
+                                <td>90'</td>
+                            </tr>
+                            <tr>
+                                <td>07.02.2026</td>
+                                <td>Далянь</td>
+                                <td>1:0</td>
+                                <td>90 + 1'</td>
+                            </tr>
+                            <tr>
+                                <td>10.02.2026</td>
+                                <td>Астана</td>
+                                <td>1:1</td>
+                                <td>90 + 1'</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
