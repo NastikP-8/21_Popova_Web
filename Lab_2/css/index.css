@@ -1,0 +1,399 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+    background-color: white;
+    border: 2px solid black;
+}
+
+header {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+}
+
+#themeSwitch {
+    padding: 8px 16px;
+    background-color: #333;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#themeSwitch:hover {
+    background-color: #555;
+    transform: scale(1.2);
+}
+
+hgroup {
+    background-color: #ffcc00;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid black;
+}
+
+hgroup h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 10px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+aside {
+    background-color: #ffb6b6;
+    padding: 15px;
+    border: 2px dotted red;
+    text-align: center;
+}
+
+aside h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: darkred;
+}
+
+aside p {
+    margin-bottom: 15px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+
+article {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+figure {
+    margin: 0 0 20px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+.reasons-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.reason-box {
+    flex: 1 1 140px;
+    background-color: #90ee90;
+    padding: 15px;
+    border: 2px solid green;
+    text-align: center;
+    font-weight: bold;
+    min-width: 120px;
+    box-sizing: border-box;
+}
+
+.slogans {
+    background-color: #add8e6;
+    padding: 20px;
+    margin: 20px 0;
+    border: 3px dashed blue;
+    text-align: center;
+}
+
+.slogans p {
+    font-size: 22px;
+    font-weight: bold;
+    color: darkblue;
+    margin: 10px 0;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.reviewCard {
+    background-color: #f4a460;
+    padding: 15px;
+    border: 2px solid brown;
+    border-radius: 10px;
+}
+
+.reviewCard p {
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.reviewCard img {
+    max-width: 100%;
+    max-height: 150px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.addReview {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid gray;
+}
+
+.addReview h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.addReview input,
+.addReview textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.addReview textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.addReview button {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.addReview button:hover {
+    background-color: #e6b800;
+}
+
+#reviewError {
+    color: red;
+    margin-top: 10px;
+    display: block;
+}
+
+.button {
+    display: block;
+    width: 250px;
+    margin: 30px auto 10px;
+    padding: 15px;
+    background-color: orange;
+    border: 3px solid black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.button:hover {
+    background-color: #ff8c00;
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-top: 3px solid black;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:first-child {
+    margin-top: 0;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+.container.dark-theme {
+    background-color: #1a1a1a;
+    border-color: #666;
+}
+
+.container.dark-theme header {
+    background-color: #2d2d2d;
+}
+
+.container.dark-theme #themeSwitch {
+    background-color: #666;
+    color: #fff;
+}
+
+.container.dark-theme hgroup {
+    background-color: #8b6b00;
+    border-bottom-color: #666;
+}
+
+.container.dark-theme hgroup h1,
+.container.dark-theme hgroup p {
+    color: #fff;
+}
+
+.container.dark-theme main {
+    background-color: #2d2d2d;
+}
+
+.container.dark-theme aside {
+    background-color: #4d2e2e;
+    border-color: #ff6b6b;
+}
+
+.container.dark-theme aside h3 {
+    color: #ff9999;
+}
+
+.container.dark-theme aside p {
+    color: #ddd;
+    border-bottom-color: #666;
+}
+
+.container.dark-theme article {
+    background-color: #333;
+    border-color: #666;
+}
+
+.container.dark-theme section h2 {
+    color: #fff;
+}
+
+.container.dark-theme section p {
+    color: #fff;
+}
+
+.container.dark-theme .reason-box {
+    background-color: #2d5a2d;
+    border-color: #90ee90;
+    color: #fff;
+}
+
+.container.dark-theme .slogans {
+    background-color: #2d4d5a;
+    border-color: #add8e6;
+}
+
+.container.dark-theme .slogans p {
+    color: #b0e0ff;
+}
+
+.container.dark-theme .reviews {
+    color: #fff;
+}
+
+.container.dark-theme .reviewCard {
+    background-color: #8b5a2e;
+    border-color: #cd853f;
+    color: #fff;
+}
+
+.container.dark-theme .addReview {
+    background-color: #333;
+    border-color: #666;
+}
+
+.container.dark-theme .addReview h3 {
+    color: #fff;
+}
+
+.container.dark-theme .addReview input,
+.container.dark-theme .addReview textarea {
+    background-color: #444;
+    border-color: #666;
+    color: white;
+}
+
+.container.dark-theme .addReview input::placeholder,
+.container.dark-theme .addReview textarea::placeholder {
+    color: #999;
+}
+
+.container.dark-theme .addReview button {
+    background-color: #b37400;
+    border-color: #666;
+    color: white;
+}
+
+.container.dark-theme .addReview button:hover {
+    background-color: #8b5a00;
+}
+
+.container.dark-theme #reviewError {
+    color: #ff9999;
+}
+
+.container.dark-theme .button {
+    background-color: #b37400;
+    border-color: #666;
+    color: #fff;
+}
+
+.container.dark-theme .button:hover {
+    background-color: #8b5a00;
+}
+
+.container.dark-theme footer {
+    background-color: #111;
+    border-top-color: #666;
+    color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    hgroup h1 {
+        font-size: 24px;
+    }
+    
+    .reason-box {
+        flex: 1 1 100%;
+    }
+    
+    .button {
+        width: 100%;
+    }
+    
+    .slogans p {
+        font-size: 18px;
+    }
+}

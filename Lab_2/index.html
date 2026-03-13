@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Поворотники для человека</title>
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <button id="themeSwitch" aria-label="Переключить тему">🌙Тёмная тема</button>
+            <hgroup>
+                <h1>ПОВОРОТНИКИ ДЛЯ ЧЕЛОВЕКА</h1>
+                <p>Только вы определяете своё направление!</p>
+            </hgroup>
+        </header>
+
+        <main>
+            <aside>
+                <h3>СРОЧНО КУПИ!</h3>
+                <p>Это именно то, что тебе нужно</p>
+                <p>Не откладывай покупку, откладывай деньги</p>
+                <p>Рассрочка на 2 дня</p>
+            </aside>
+
+            <article>
+                <section>
+                    <h2>УСПЕЙТЕ КУПИТЬ!</h2>
+                    <p>Если вы до сих пор считаете, что поворотники - это привилегия только автомобилистов, вы ошибаетесь! <br>
+                    Представляем вашему вниманию поворотники для пешеходов!</p>
+                    <figure>
+                        <img src="images/2.jpg" alt="Поворотник">
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>Формула проста!</h2>
+                    <figure>
+                        <img src="images/super_img.png" alt="Поворотник">
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>ТОП-5 ПРИЧИН КУПИТЬ</h2>
+                    <ol class="reasons-flex">
+                        <li class="reason-box">Руки всегда заняты</li>
+                        <li class="reason-box">Никаких больше неловких столкновений</li>
+                        <li class="reason-box">Можно сэкономить на гирляндах</li>
+                        <li class="reason-box">Можно продать авто - оно больше ни к чему</li>
+                        <li class="reason-box">Можно не заряжать (просто не будут светить)</li>
+                    </ol>
+                </section>
+
+                <section class="slogans">
+                    <p>КУПИЛ ПОВОРОТНИК - СТАЛ ПОЛНОПРАВНЫМ ПЕШЕХОДОМ!</p>
+                    <p>НЕ ВЫ БУДЕТЕ ЗАВИДОВАТЬ АВТОВЛАДЕЛЬЦАМ, А ОНИ ВАМ!</p>
+                    <p>100% ПОКУПАТЕЛЕЙ ИЗБЕЖАЛИ ДТП - 0% ЖАЛОБ!</p>
+                </section>
+
+                <section>
+                    <h2>ОТЗЫВЫ</h2>
+                    <div id="reviewsContainer" class="reviews"></div>
+
+                    <form class="addReview">
+                        <h3>Добавить отзыв</h3>
+                        <input type="text" id="reviewName" placeholder="Ваше имя" required minlength="2">
+                        <textarea id="reviewText" placeholder="Ваш отзыв" required minlength="5"></textarea>
+                        <input type="file" id="reviewImage" accept="image/*">
+                        <button type="button" id="addReviewBtn">Добавить</button>
+                        <output id="reviewError"></output>
+                    </form>
+                </section>
+
+                <button class="button" type="button">ХОЧУ ТАКИЕ ЖЕ</button>
+            </article>
+
+            <aside>
+                <h3>УНИКАЛЬНОЕ ПРЕДЛОЖЕНИЕ</h3>
+                <p>Только сегодня: ТРЕТИЙ в подарок</p>
+                <p>Отдаёте авто - ДВА поворотника в подарок!</p>
+                <p>Гарантия - пока не сломается</p>
+            </aside>
+        </main>
+
+        <footer>
+            <p>ООО "Лево - не право", 2026</p>
+            <p>Не является офертой (но вы не знаете что это)</p>
+        </footer>
+    </div>
+
+    <script>
+        let reviews = [
+            { name: "Анна", text: "Все понравилось" },
+            { name: "Дмитрий", text: "Перестал сталкиваться с людьми в метро, это непередаваемо!" },
+            { name: "Иван", text: "Пришёл брак! Оба поворотника левые! Верните деньги!!!" },
+            { name: "Петр", text: "Полчаса не мог выключить.. Пришлось ходить по кругу. Опоздал на работу.." }
+        ];
+
+        function showReviews() {
+            let container = document.getElementById('reviewsContainer');
+            container.innerHTML = '';
+            
+            for (let i = 0; i < reviews.length; i++) {
+                let review = reviews[i];
+                let card = document.createElement('article');
+                card.className = 'reviewCard';
+                
+                let imageHtml = '';
+                if (review.image) {
+                    imageHtml = '<img src="' + review.image + '" style="max-width:100%; max-height:150px;">';
+                }
+                
+                card.innerHTML = imageHtml + '<p>"' + review.text + '"</p><p>- ' + review.name + '</p>';
+                container.appendChild(card);
+            }
+        }
+
+        let themeBtn = document.getElementById('themeSwitch');
+        let container = document.querySelector('.container');
+        
+        themeBtn.onclick = function() {
+            container.classList.toggle('dark-theme');
+            themeBtn.innerHTML = container.classList.contains('dark-theme') ? '☀️Светлая тема' : '🌙Тёмная тема';
+        };
+
+        let addBtn = document.getElementById('addReviewBtn');
+        let nameInput = document.getElementById('reviewName');
+        let textInput = document.getElementById('reviewText');
+        let imageInput = document.getElementById('reviewImage');
+        let errorOutput = document.getElementById('reviewError');
+
+        addBtn.onclick = function() {
+            let name = nameInput.value.trim();
+            let text = textInput.value.trim();
+            let imageFile = imageInput.files[0];
+            
+            if (!name || !text) {
+                errorOutput.value = 'Заполните все поля';
+                return;
+            }
+            
+            if (name.length < 2) {
+                errorOutput.value = 'Имя слишком короткое';
+                return;
+            }
+            
+            if (text.length < 5) {
+                errorOutput.value = 'Отзыв слишком короткий';
+                return;
+            }
+            
+            if (imageFile) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    reviews.push({ name: name, text: text, image: e.target.result });
+                    nameInput.value = '';
+                    textInput.value = '';
+                    imageInput.value = '';
+                    errorOutput.value = '';
+                    showReviews();
+                };
+                reader.readAsDataURL(imageFile);
+            } else {
+                reviews.push({ name: name, text: text });
+                nameInput.value = '';
+                textInput.value = '';
+                errorOutput.value = '';
+                showReviews();
+            }
+        };
+
+        showReviews();
+    </script>
+</body>
+</html>
