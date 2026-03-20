@@ -1,0 +1,120 @@
+body {
+    margin: 100px;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #777;
+    transform: scale(1.01);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;    
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: white;
+    margin: 20px;
+    border: 3px solid #333;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.card h3 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.card .card-type {
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.card .card-stats {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #e67e22;
+}
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.card-actions button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.card-actions button.edit-btn {
+    background-color: #3498db;
+}
+
+.add-form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.add-form input, .add-form select, .add-form textarea {
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.add-form button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.edit-form {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: 15px;
+}
+
+.edit-form input,
+.edit-form textarea {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+
+.edit-form button {
+    padding: 5px 10px;
+    margin-right: 5px;
+}
